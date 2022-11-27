@@ -1,4 +1,4 @@
-import { observer } from 'mobx-react-lite';
+import { observer, useLocalObservable } from 'mobx-react-lite';
 import Guess from "../components/Guess";
 import Qwerty from "../components/Qwerty";
 import PuzzleStore from '../stores/PuzzleStore';
