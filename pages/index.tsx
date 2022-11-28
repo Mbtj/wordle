@@ -27,7 +27,6 @@ export default observer(function Home() {
           isGuessed={i < store.currentGuess}
         />
       ))}
-      <h1>won/loss</h1>
       {store.won && <h1>You won!</h1>}
       {store.lost && <h1>You lost 😭 </h1>}
       {(store.won || store.lost) && (
