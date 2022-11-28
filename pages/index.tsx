@@ -1,3 +1,4 @@
+// @ts-nocheck  
 import { observer, useLocalObservable } from 'mobx-react-lite';
 import { useEffect } from 'react';
 import Guess from "../components/Guess";
@@ -9,7 +10,7 @@ export default observer(function Home() {
   useEffect(() => {
     store.init()
     window.addEventListener('keyup', store.handleKeyup);
-
+    console.log(store)
     //clean up function
     return () => {
       window.removeEventListener('keyup', store.handleKeyup);
