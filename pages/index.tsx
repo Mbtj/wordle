@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Guess from "../components/Guess";
 import Qwerty from "../components/Qwerty";
 import PuzzleStore from '../stores/PuzzleStore';
+
 export default observer(function Home() {
   const store = useLocalObservable (() => PuzzleStore)
   useEffect(() => {
@@ -32,7 +33,7 @@ export default observer(function Home() {
       {(store.won || store.lost) && (
         <button onClick={store.init}>Play Again</button>
       )}
-      <Qwerty/>
+      <Qwerty store={store}/>
       {store.word}
     </div>
   )
