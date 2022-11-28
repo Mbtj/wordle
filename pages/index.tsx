@@ -34,7 +34,6 @@ export default observer(function Home() {
         <button onClick={store.init}>Play Again</button>
       )}
       <Qwerty store={store}/>
-      {store.word}
     </div>
   )
 })
