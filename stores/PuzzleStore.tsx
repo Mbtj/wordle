@@ -42,8 +42,8 @@ export default {
   },
 
   submitGuess() {
-    // Submit the guess if not a duplicate, and has 5 letters
-    if (!this.guesses.slice(this.currentGuess - 1).includes(this.guesses[this.currentGuess]) && this.guesses[this.currentGuess].length === 5 ) {
+    // Submit the guess if it has 5 letters
+    if (this.guesses[this.currentGuess].length === 5 ) {
       this.currentGuess += 1;
     }
   },
